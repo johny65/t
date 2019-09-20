@@ -1,8 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """t is for people that want do things, not organize their tasks."""
-
-from __future__ import with_statement, print_function
 
 import os, re, sys, hashlib
 from operator import itemgetter
@@ -193,7 +191,7 @@ class TaskDict(object):
             text = re.sub(find, repl, task['text'])
 
         task['text'] = text
-        task['id'] = _hash(text)
+        # task['id'] = _hash(text)
 
     def finish_task(self, prefix):
         """Mark the task with the given prefix as finished.
